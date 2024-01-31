@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-text-color: #212529;
+    --secondary-text-color: #6c757d; 
+    --nav-bg-color: #212529;
+    --header-bg-color: #ffffff; 
+    --gallery-bg-color: #f8f9fa;
+    --primary-accent-color: #0d6efd;
+    --primary-dark-accent-color: #0a58ca;
+    --secondary-accent-color: #6c757d;
+    --secondary-dark-accent-color: #5c636a;
+}
+body{
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--header-bg-color);
+}
+h1{
+    font-weight: 300;
+}
+
+/* ----------------utility classes----------------------- */
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+/* -------------------navigation classes ------------------ */
+
+.nav-bar{
+    background-color: var(--nav-bg-color);
+    width: 100%;
+    height: 56px;
+    display: grid;
+    align-items: center;
+}
+.nav-bar-link{
+    width: 100%;
+    height: 40px;
+    justify-content: space-between;
+    padding-inline: 12px;
+}
+.nav-link{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding-block: 5px;
+    cursor: pointer;
+}
+.nav-link i{
+    margin-right: 4px ;
+}
+/* --menu bar -- */
+.fa-bars{
+    color: #ffffff8e;
+}
+.menu-bar{
+    padding: 4px 12px;
+    font-size: 26px;
+    width: 50px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.menu-bar:hover{
+    border: 4px ridge #ccc5c5bf;
+    border-radius: 8px ;
+}
+
+/*-------------------- header class----------------------- */
+
+.header{
+    justify-content: center;
+    width: 100%;
+    margin-block: 40px;
+    /* height: 425px; */
+}
+.header-group{
+    width: 50%;
+    height: max-content;  /* change*/
+    flex-direction: column;
+    justify-content: center;
+    margin-block: 40px;
+}
+.header-text{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header-text h1{
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+.header-text p{
+    font-weight: 200;
+    font-size: 1.2rem;
+    line-height: 30px;
+    color: var(--secondary-text-color);
+
+}
+/* header-link buttons */
+.header-links{
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    gap: 5px;
+
+}
+/* primary link btn */
+.header-links .btn {
+    color: var(--header-bg-color);
+    border-radius: 6px;
+    background-color: var(--primary-accent-color);
+    padding: 10px 14px;
+    text-decoration: none;
+    transition: .2s ease;
+    width: max-content;
+}
+.header-links .btn:hover{
+    background-color: var(--primary-dark-accent-color);
+}
+/* Secondary link btn */
+
+.header-links p:nth-child(2) a{
+    background-color: var(--secondary-accent-color);
+}
+.header-links p:nth-child(2) a:hover{
+    background-color: var(--secondary-dark-accent-color);
+}
+
+/* -----------------------Gallery Section----------------------  */
+
+.main-section{
+    background-color: var(--gallery-bg-color);
+    padding-block: 40px;
+}
+.gallery{
+    
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 400px;
+    gap: 18px;
+    flex-direction: column;
+    
+}
+.album{
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0.11px 2.25px var(--secondary-accent-color);
+}
+.album-img{
+    background-color: #212529bd;
+    height: 250px;
+    width: 100%;
+    justify-content: center;
+    color: var(--header-bg-color);
+    border-radius: 6px 6px 0 0;
+}
+.album-text{
+    padding: 20px 15px;
+    background-color: var(--header-bg-color);
+    height: 100%;
+}
+.album-text p{
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #212529;
+    line-height: 24px;
+}
+
+
+/* ----Button group--- */
+.btn-text-group{
+    justify-content: space-between;
+    height: 30px;
+}
+
+.album-btn .btn{
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    padding: 6px 10px;
+    border: 1px solid var(--secondary-accent-color);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--header-bg-color);
+    transition: all 0.2s ease;
+}
+
+.album-btn .btn:hover{
+    background-color: var(--secondary-accent-color);
+    color: var(--header-bg-color);
+}
+
+
+/* --Small text--- */
+.btn-text-group .small-text{
+    color: #212529bd;
+}
+
+/* ------------------footer section ----------------- */
+
+.footer-group{
+    width: 100%;
+    height: 150px;
+    padding-inline: 12px;
+    
+    justify-content: center;
+    flex-direction: column;
+    align-items: normal;
+}
+.footer-group p{
+    color: var(--secondary-accent-color);
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+}
+.footer-text-group{
+    justify-content: space-between;
+    margin-block: 10px;
+    width: 100%;
+}
+
+.footer-group a{
+    color: var(--primary-accent-color);
+}
+.footer-group a:hover{
+    color:var(--primary-dark-accent-color);
+}
